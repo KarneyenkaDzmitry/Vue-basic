@@ -17,7 +17,7 @@
 11. When inStock is false, bind a class to the “Out of Stock” span tag that adds text-decoration: line-through to that element.
 12. Add computed property for title( brand plus productName).
 13. Implement feature which will switch disability or ability of 'add to Cart' button and at the same time switch text between 'In Stock' and 'Out of Stock' in accordance to amount of things in stock.
-
+14. Add a new boolean data property onSale and create a computed property that takes brand, product and onSale and prints out a string whenever onSale is true.
 <!-- ### Dependencies
 
 The application needs to have the following dependencies:

@@ -10,6 +10,7 @@ var app = new Vue({
         selectedProduct: 0,
         sizes: ['S', 'L', 'XL', 'XXL'],
         cart: 0,
+        onSale: true,
         productVariants: [
             {
                 id: 2321,
@@ -33,7 +34,14 @@ var app = new Vue({
             return this.productVariants[this.selectedProduct].image;
         },
         inStock() {
-            return this.productVariants[this.selectedProduct].inventary > 0;
+            return this.productVariants[this.selectedProduct].inventary;
+        },
+        sale() {
+            if (this.onSale) {
+                return this.title + ' is On Sale!';
+            } else {
+                return this.title + ' is not On Sale!';
+            }
         }
     },
     methods: {

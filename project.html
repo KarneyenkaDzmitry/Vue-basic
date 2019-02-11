@@ -20,6 +20,7 @@
                 <p>{{ description }}</p>
                 <span v-if="inStock">In Stock</span>
                 <span v-else :class="{outOfStock: !inStock}">Out of Stock</span>
+                <p v-text="sale"></p>
                 <p>Colors:</p>
                 <div v-for="(product, index) in productVariants" class="color-box" :style="{backgroundColor: product.color}"
                     :key="product.id" @mouseover="changeSelectedProduct(index)"></div>
