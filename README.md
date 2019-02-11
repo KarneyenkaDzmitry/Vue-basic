@@ -7,8 +7,9 @@
 1. Create new Vue instance and bind it to project.html by using css selector. Put value of product from vue-object between h1-tags by using mustache-brackets.
 2. Add a description key to our existing data object with the value “A pair of warm, fuzzy socks”. Then display description using an expression in an p element, underneath the h1.
 3. Add a link to your data object, and use v-bind to sync it up with an anchor tag in your HTML. Hint: you’ll be binding to the href attribute.
-4. Add an onSale property to the product’s data that is used to conditionally render a span that says “On Sale!”
+4. Add an onSale property to the product’s data that is used to conditionally render a span that says “On Sale!”.
 5. Add an array of sizes to the data and use v-for to display them in a list.
+6. Create a new button and method to decrement the value of cart.
 
 <!-- ### Dependencies
 

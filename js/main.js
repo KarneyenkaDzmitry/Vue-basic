@@ -8,6 +8,12 @@ var app = new Vue({
         description: 'A pair of warm, fuzzy socks',
         image: './img/vmSocs-green.jpeg',
         onSale: true,
-        sizes: ['S', 'L', 'XL', 'XXL']
+        sizes: ['S', 'L', 'XL', 'XXL'],
+        cart: 0,
+    },
+    methods: {
+        incrementCart() {
+            this.cart++;
+        }
     }
 })
