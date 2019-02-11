@@ -6,6 +6,7 @@
 ### Steps: 
 1. Create new Vue instance and bind it to project.html by using css selector. Put value of product from vue-object between h1-tags by using mustache-brackets.
 2. Add a description key to our existing data object with the value “A pair of warm, fuzzy socks”. Then display description using an expression in an p element, underneath the h1.
+3. Add a link to your data object, and use v-bind to sync it up with an anchor tag in your HTML. Hint: you’ll be binding to the href attribute.
 
 <!-- ### Dependencies
 
@@ -34,3 +35,47 @@ And will be run webdriver-manager update.
 
 ## Structure 
 ### Folders: -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en" {IF CLASSES}class="classes"{/IF}>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  {IF PRIVATE}
+  <meta name="robots" content="noindex">
+  {ELSE}
+  <!-- MIT License -->
+  {/IF}
+
+  <title>{TITLE}</title>
+
+  {STUFF FOR <HEAD>}
+
+  <link rel="stylesheet" href="{CSS RESET CHOICE}">
+  {EXTERNAL CSS}
+  <style>
+  {EDITOR CSS}
+  </style>
+
+  {PREFIX FREE (if enabled)}
+  {MODERNIZR (if enabled)}
+
+</head>
+
+<body>
+
+  {EDITOR HTML}
+
+  {JS Library (if chosen)}
+  {EXTERNAL JS}
+
+  <script>
+    {EDITOR JS}
+    //# sourceURL=pen.js
+  </script>
+
+</body>
+
+</html> -->
