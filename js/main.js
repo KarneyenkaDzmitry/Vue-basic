@@ -18,9 +18,7 @@ Vue.component('product', {
         <ul v-for="size in sizes">
             <li v-text="size"></li>
         </ul>
-    </div>
-    <button v-on:click="incrementCart" :class="{ disabledButton : !inStock }" :disabled="!inStock">Add to Cart</button>
-    <div class="product">
+        <button v-on:click="incrementCart" :class="{ disabledButton : !inStock }" :disabled="!inStock">Add to Cart</button>
         <div class="cart">
             <p>Cart({{cart}})</p>
         </div>
