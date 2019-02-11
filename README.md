@@ -10,6 +10,7 @@
 4. Add an onSale property to the product’s data that is used to conditionally render a span that says “On Sale!”.
 5. Add an array of sizes to the data and use v-for to display them in a list.
 6. Create a new button and method to decrement the value of cart.
+7. Add color variants and set up a listener for moseover of color for changing image according to the color.
 
 <!-- ### Dependencies
 
