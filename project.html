@@ -19,6 +19,9 @@
                 <h1>{{ product }}</h1>
                 <p>{{ description }}</p>
                 <span v-if="onSale">On Sale!</span>
+                <ul v-for="size in sizes">
+                    <li v-text="size"></li>
+                </ul>
             </div>
         </div>
     </div>

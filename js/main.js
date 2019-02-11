@@ -7,6 +7,7 @@ var app = new Vue({
         product: 'Socks',
         description: 'A pair of warm, fuzzy socks',
         image: './img/vmSocs-green.jpeg',
-        onSale: true
+        onSale: true,
+        sizes: ['S', 'L', 'XL', 'XXL']
     }
 })
