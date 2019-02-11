@@ -4,6 +4,7 @@
 var app = new Vue({
     el: '#app',
     data: {
+        brand: 'My awesom brand',
         product: 'Socks',
         description: 'A pair of warm, fuzzy socks',
         image: './img/vmSocks-green.jpeg',
@@ -22,6 +23,11 @@ var app = new Vue({
                 image: "./img/vmSocks-green.jpeg"
             }
         ]
+    },
+    computed: {
+        title() {
+            return `${this.brand} ${this.product}`;
+        }
     },
     methods: {
         incrementCart() {
