@@ -7,7 +7,7 @@ var app = new Vue({
         product: 'Socks',
         description: 'A pair of warm, fuzzy socks',
         image: './img/vmSocks-green.jpeg',
-        onSale: true,
+        inStock: true,
         sizes: ['S', 'L', 'XL', 'XXL'],
         cart: 0,
         productVariants: [

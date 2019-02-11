@@ -11,6 +11,8 @@
 5. Add an array of sizes to the data and use v-for to display them in a list.
 6. Create a new button and method to decrement the value of cart.
 7. Add color variants and set up a listener for moseover of color for changing image according to the color.
+8. Change text of colors into colored styled boxes. 
+9. If the product is out of stock, disable the add to Cart button.
 
 <!-- ### Dependencies
 

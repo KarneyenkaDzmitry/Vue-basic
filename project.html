@@ -18,10 +18,10 @@
             <div class="product-info">
                 <h1>{{ product }}</h1>
                 <p>{{ description }}</p>
-                <span v-if="onSale">On Sale!</span>
-                <ul v-for="product in productVariants">
-                    <li v-text="product.color" :key="product.colorId" @mouseover="changeImage(product.image)"></li>
-                </ul>
+                <span v-if="onSale">In Stock</span>
+                <span v-else>Out of Stock</span>
+                <div v-for="product in productVariants" class="color-box" :style="{backgroundColor: product.color}"
+                    :key="product.colorId" @mouseover="changeImage(product.image)"></div>
                 <ul v-for="size in sizes">
                     <li v-text="size"></li>
                 </ul>
