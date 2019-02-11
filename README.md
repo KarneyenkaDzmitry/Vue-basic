@@ -1,11 +1,11 @@
-# The project as introduction with Vue.js framework
+# Introduction to Vue.js
 
 
-## It has been done as step-by-step learning:
+## The project has been made for step-by-step learning:
 
 ### Steps: 
-1. Create new Vue instance and bind it to project.html by using css selector. Past value of product from vue-object between h1-tags by ising mustache-brackets.
-2.  
+1. Create new Vue instance and bind it to project.html by using css selector. Put value of product from vue-object between h1-tags by using mustache-brackets.
+2. Add a description key to our existing data object with the value “A pair of warm, fuzzy socks”. Then display description using an expression in an p element, underneath the h1.
 
 <!-- ### Dependencies
 
