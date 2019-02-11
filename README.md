@@ -15,7 +15,8 @@
 9. If the product is out of stock, disable the add to Cart button.
 10. Add feature: if button disabled incrementButton method shouldn't be run.
 11. When inStock is false, bind a class to the “Out of Stock” span tag that adds text-decoration: line-through to that element.
-12. Add computed property for title( brand plus productName);
+12. Add computed property for title( brand plus productName).
+13. Implement feature which will switch disability or ability of 'add to Cart' button and at the same time switch text between 'In Stock' and 'Out of Stock' in accordance to amount of things in stock.
 
 <!-- ### Dependencies
 

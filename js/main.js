@@ -7,34 +7,41 @@ var app = new Vue({
         brand: 'My awesom brand',
         product: 'Socks',
         description: 'A pair of warm, fuzzy socks',
-        image: './img/vmSocks-green.jpeg',
-        inStock: true,
+        selectedProduct: 0,
         sizes: ['S', 'L', 'XL', 'XXL'],
         cart: 0,
         productVariants: [
             {
-                colorId: 2321,
+                id: 2321,
                 color: "blue",
-                image: "./img/vmSocks-blue.jpeg"
+                image: "./img/vmSocks-blue.jpeg",
+                inventary: 0
             },
             {
-                colorId: 2322,
+                Id: 2322,
                 color: "green",
-                image: "./img/vmSocks-green.jpeg"
+                image: "./img/vmSocks-green.jpeg",
+                inventary: 10
             }
         ]
     },
     computed: {
         title() {
             return `${this.brand} ${this.product}`;
+        },
+        image() {
+            return this.productVariants[this.selectedProduct].image;
+        },
+        inStock() {
+            return this.productVariants[this.selectedProduct].inventary > 0;
         }
     },
     methods: {
         incrementCart() {
             this.cart++;
         },
-        changeImage(imagePath) {
-            this.image = imagePath;
+        changeSelectedProduct(index) {
+            this.selectedProduct = index;
         }
     }
 })
