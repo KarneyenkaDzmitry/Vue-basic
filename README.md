@@ -13,6 +13,7 @@
 7. Add color variants and set up a listener for moseover of color for changing image according to the color.
 8. Change text of colors into colored styled boxes. 
 9. If the product is out of stock, disable the add to Cart button.
+10. Add feature: if button disabled incrementButton method shouldn't be run.
 
 <!-- ### Dependencies
 
