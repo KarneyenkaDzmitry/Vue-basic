@@ -6,6 +6,7 @@ var app = new Vue({
     data: {
         product: 'Socks',
         description: 'A pair of warm, fuzzy socks',
-        image: './img/vmSocs-green.jpeg'
+        image: './img/vmSocs-green.jpeg',
+        onSale: true
     }
 })
