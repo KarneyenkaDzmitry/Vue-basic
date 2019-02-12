@@ -26,9 +26,7 @@ Vue.component('product', {
             <li v-text="size"></li>
         </ul>
         <button v-on:click="incrementCart" :class="{ disabledButton : !inStock }" :disabled="!inStock">Add to Cart</button>
-        <div class="cart">
-            <p>Cart({{cart}})</p>
-        </div>
+        
     </div>
 </div>`,
     data() {
@@ -48,7 +46,7 @@ Vue.component('product', {
                     inventary: 0
                 },
                 {
-                    Id: 2322,
+                    id: 2322,
                     color: "green",
                     image: "./img/vmSocks-green.jpeg",
                     inventary: 10
@@ -79,7 +77,7 @@ Vue.component('product', {
     },
     methods: {
         incrementCart() {
-            this.cart++;
+            this.$emit('add-to-cart', this.productVariants[this.selectedProduct].id);
         },
         changeSelectedProduct(index) {
             this.selectedProduct = index;
@@ -90,6 +88,13 @@ Vue.component('product', {
 var app = new Vue({
     el: '#app',
     data: {
-        premium: true
+        premium: true,
+        cart: []
+    },
+    methods: {
+        addToCart(id) {
+            this.cart.push(id);
+            console.log(this.cart);
+        }
     }
 });
