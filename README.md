@@ -19,6 +19,7 @@
 13. Implement feature which will switch disability or ability of 'add to Cart' button and at the same time switch text between 'In Stock' and 'Out of Stock' in accordance to amount of things in stock.
 14. Add a new boolean data property onSale and create a computed property that takes brand, product and onSale and prints out a string whenever onSale is true.
 15. Rewrite the project using component.
+16. The price should be displayed in accordance of a user's status. (premium - free, not - price)
 
 <!-- ### Dependencies
 

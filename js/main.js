@@ -1,6 +1,12 @@
 //Add a description to the data object with the value "A pair of warm, fuzzy socks".
 //  Then display the description using an expression in an p element, underneath the h1.
 Vue.component('product', {
+    props: {
+        premium: {
+            type: Boolean,
+            required: true
+        }
+    },
     template: `<div class="product">
     <div class="product-image">
         <img :src="image" />
@@ -10,6 +16,7 @@ Vue.component('product', {
         <p>{{ description }}</p>
         <span v-if="inStock">In Stock</span>
         <span v-else :class="{outOfStock: !inStock}">Out of Stock</span>
+        <p>Price is: {{shipping}}</p>
         <p v-text="sale"></p>
         <p>Colors:</p>
         <div v-for="(product, index) in productVariants" class="color-box" :style="{backgroundColor: product.color}"
@@ -65,6 +72,9 @@ Vue.component('product', {
             } else {
                 return this.title + ' is not On Sale!';
             }
+        },
+        shipping() {
+            return this.premium ? 'Free' : '2.99';
         }
     },
     methods: {
@@ -79,4 +89,7 @@ Vue.component('product', {
 
 var app = new Vue({
     el: '#app',
+    data: {
+        premium: true
+    }
 });
