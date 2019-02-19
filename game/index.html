@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Monster Slayer</title>
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/foundation.min.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <div id="app">
+        <section class="row">
+            <div class="small-6 columns">
+                <h1 class="text-center">YOU</h1>
+                <div class="healthbar">
+                    <div class="healthbar text-center" style="background-color: green; margin: 0; color: white;"
+                        :style="{width: player +'%'}" v-text="player">
+
+                    </div>
+                </div>
+            </div>
+            <div class="small-6 columns">
+                <h1 class="text-center">MONSTER</h1>
+                <div class="healthbar">
+                    <div class="healthbar text-center" style="background-color: green; margin: 0; color: white;"
+                        v-text="monster" :style="{width: monster +'%'}">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="row controls" v-show="showStartBar" @click="start">
+            <div class="small-12 columns">
+                <button id="start-game">START NEW GAME</button>
+            </div>
+        </section>
+        <section class="row controls" v-show="showFightBar">
+            <div class="small-12 columns">
+                <button id="attack" @click="attack(10)">ATTACK</button>
+                <button id="special-attack" @click="attack(20)">SPECIAL ATTACK</button>
+                <button id="heal" @click="heal">HEAL</button>
+                <button id="give-up" @click="giveUp">GIVE UP</button>
+            </div>
+        </section>
+        <section class="row log" v-show="showLog">
+            <div class="small-12 columns">
+                <ul>
+                    <li v-for="(element, index) in log">
+                        <div class="monster-turn">{{getMessage(element, 'monster')}}</div>
+                        <div class="player-turn">{{getMessage(element, 'player')}}</div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

@@ -21,6 +21,7 @@
 15. Rewrite the project using component.
 16. The price should be displayed in accordance of a user's status. (premium - free, not - price).
 17. Add a button that removes the product from the cart array by emitting an event with the id of the product to be removed.
+18. Create a form that allows users to submit a review of a product, but only if they have filled out the required fields.
 
 <!-- ### Dependencies
 
